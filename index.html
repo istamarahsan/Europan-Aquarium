@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Europan Aquarium</title>
+    <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <script src="js/modal.js"></script>
+    <script src="js/signup.js"></script>
 </head>
 <body>
     <header class="header">
@@ -20,10 +24,10 @@
                 </a>
             </div>
             <div class="header_links">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="#">Gallery</a>
                 <a href="#">About</a>
-                <a href="https://barotraumagame.com/wiki/Main_Page">Wiki</a>
+                <a href="https://barotraumagame.com/wiki/Main_Page">Wiki↗</a>
                 <a href="#">Contribute</a>
             </div>
         </nav>
@@ -39,7 +43,7 @@
                     small pockets of humanity find warmth beneath the ice.
                     But they are not alone.</span>
                 <br><br>
-                <span style="color: cyan">Our mission is to catalog the life that thrives within the deep.</span>
+                <span style="color: #00ffff">Our mission is to catalog the life that thrives within the deep.</span>
             </div>
             <div class="gallery_link">
                 <span>
@@ -51,14 +55,17 @@
             </div>
         </div>
     </div>
+    <div class="featured_creature_header">
+        <h1>Featured Creatures</h1>
+    </div>
     <div class="featured_creatures">
-        <div class="featured_creature_header">
-            <h1>Featured Creatures</h1>
-        </div>
         <div class="featured_creature">
-        <div class="image_container">
+        <a href="latcher.html" class="image_container">
             <img src="img/creatures/latcher.png" alt="Latcher">
-        </div>
+            <div class="overlay">
+                <h4>Latcher ↗</h4>
+            </div>
+        </a>
         <div class="description">
             <h3>Latcher</h3>
             <div class="afflictions">
@@ -85,16 +92,20 @@
                     or has eaten whatever it has caught.
                 </p>
             </div>
-            <a class="button" href="#">See Full Entry ➡</a>
+            <a class="button" href="latcher.html">See Full Entry ➡</a>
         </div>
         </div>
         <div class="featured_creature">
-            <div class="image_container">
-                <img style="
+                <a href="watcher.html" class="image_container">
+                    <img
+                            style="
                 -webkit-transform: scaleX(-1);
-                transform: scaleX(-1);"
-                     src="img/creatures/watcher.png" alt="Watcher">
-            </div>
+                transform: scaleX(-1); z-index: -1;"
+                            src="img/creatures/watcher.png" alt="Watcher">
+                    <div class="overlay">
+                        <h4>Watcher ↗</h4>
+                    </div>
+                </a>
             <div class="description">
                 <h3>Watcher</h3>
                 <div class="afflictions">
@@ -115,7 +126,7 @@
                         Watchers are solitary and always found alone, and have no special interactions with each other.
                     </p>
                 </div>
-                <a class="button" href="#">See Full Entry ➡</a>
+                <a class="button" href="watcher.html">See Full Entry ➡</a>
             </div>
         </div>
     </div>
@@ -123,8 +134,8 @@
     <div class="footer">
         <div class="footer_links">
             <div class="signup">
-                <span><span style="font-weight: bolder">Sign up</span> to get notified of new entries ➡
-                    <a class="button" href="#">SIGN UP</a></span>
+                <span><span style="font-weight: bolder">Sign up</span> to get notified of new entries or contribute ➡
+                    <a class="button" id="signup_btn" onclick="open_signup_modal()">SIGN UP</a></span>
             </div>
             <div class="social_media">
                 <span style="font-weight: bolder">Find us:</span>
@@ -146,5 +157,46 @@
             <span>Barotrauma belongs to <a href="https://www.daedalic.com/">Daedalic Entertainment GmbH</a>.</span>
         </div>
     </div>
+
+    <div class="modal" id="signup-modal">
+        <div class="modal_content">
+            <span class="close" onclick="close_signup_modal()">✖</span>
+            <form class="form" name="signup_form" onsubmit="return validate_form()">
+                <div class="form_item">
+                    <label for="form_email"> Email address: <br>
+                    </label>
+                    <input type="text" name="email" id="form_email"><br>
+                    <span class="form_error_message" id="email_error_message"></span>
+                </div>
+                <div class="form_item">
+                    <label for="form_password"> Password: <br>
+                    </label>
+                    <input type="text" name="password" id="form_password"><br>
+                    <span class="form_error_message" id="password_error_message"></span>
+                </div>
+                <div class="form_item" >
+                        <select name="notify" id="form_notify">
+                            <option value="all"> Notify me about new creatures and creature packs </option>
+                            <option value="creatures_only">Notify me about new creatures only</option>
+                            <option value="packs_only">Notify me about new packs only</option>
+                            <option value="none">Don't notify me</option>
+                        </select>
+                    <label for="form_notify" id="form_notify_label">
+                        <br>(You can change this later)
+                    </label>
+                </div>
+                <div class="form_item">
+                    <label for="form_contribute"> Sign me up as a contributor
+                        <input type="checkbox" name="contribute" id="form_contribute">
+                    </label>
+                </div>
+                <div class="form_item" id="signup_button_container">
+                    <button type="submit" class="button" name="signup_submit" id="signup_submit">SIGN UP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 </html>

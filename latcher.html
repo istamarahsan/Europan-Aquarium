@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/header_footer.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/creature.css">
-    <link rel="stylesheet" href="styles/watcher.css">
+    <link rel="stylesheet" href="styles/latcher.css">
     <link rel="stylesheet" href="styles/signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,17 +41,17 @@
     <div class="separator_holder">
         <div class="separator"></div>
     </div>
-    <h1 class="page_title" id="creature_name">Watcher</h1>
+    <h1 class="page_title" id="creature_name">Latcher</h1>
     <h2 class="page_subtitle" id="content_pack_name">Barotrauma</h2>
 </div>
 <div class="dossier">
     <div class="image_container">
-        <img src="img/creatures/watcher.png" style="transform: scaleX(-1)" alt="Watcher">
+        <img src="img/creatures/latcher.png" style="transform: scaleX(-1)" alt="Watcher">
     </div>
     <div class="infocard">
         <div class="infocard_item" id="creature_category">
             <h3>Category</h3>
-            <h4>Large</h4>
+            <h4>Very Large</h4>
         </div>
         <div class="infocard_item" id="creature_stats">
             <div class="infocard_item_header">
@@ -63,19 +63,19 @@
             <div class="stat_grid">
             <div class="stat_grid_item">
                 <h4>Health</h4>
-                <h5>500</h5>
+                <h5>7000</h5>
             </div>
             <div class="stat_grid_item">
                 <h4>Armor</h4>
-                <h5>85%</h5>
+                <h5>Legs</h5>
             </div>
             <div class="stat_grid_item">
                 <h4>Sight</h4>
-                <h5>5</h5>
+                <h5>3</h5>
             </div>
             <div class="stat_grid_item">
                 <h4>Hearing</h4>
-                <h5>0</h5>
+                <h5>10</h5>
             </div>
             </div>
         </div>
@@ -89,18 +89,39 @@
             <div class="damage_types">
             <div class="damage_type">
                 <div class="damage_type_image_container">
-                    <img src="img/afflictions/Affliction_Watcher's_Gaze.png" alt="Watcher's Gaze">
+                    <img src="img/afflictions/Affliction_Bleeding.png" alt="Bleeding">
                 </div>
                 <span>-</span>
-                <h6>Watcher's Gaze</h6>
+                <h6>Bleeding</h6>
             </div>
             <div class="damage_type">
                 <div class="damage_type_image_container">
-                    <img src="img/afflictions/Affliction_Burn.png" alt="Burn">
+                    <img src="img/afflictions/Affliction_Lacerations.png" alt="Lacerations">
                 </div>
                 <span>-</span>
-                <h6>Burn</h6>
+                <h6>Lacerations</h6>
             </div>
+                <div class="damage_type">
+                    <div class="damage_type_image_container">
+                        <img src="img/afflictions/Affliction_Stun.png" alt="Stun">
+                    </div>
+                    <span>-</span>
+                    <h6>Stun</h6>
+                </div>
+                <div class="damage_type">
+                    <div class="damage_type_image_container">
+                        <img src="img/afflictions/Affliction_Bite_Wounds.png" alt="Bite Wounds">
+                    </div>
+                    <span>-</span>
+                    <h6>Bite Wounds</h6>
+                </div>
+                <div class="damage_type">
+                    <div class="damage_type_image_container">
+                        <img src="img/afflictions/Affliction_Blunt_Force_Trauma.png" alt="Blunt Force Trauma">
+                    </div>
+                    <span>-</span>
+                    <h6>Blunt Force Trauma</h6>
+                </div>
             </div>
         </div>
         <div class="infocard_item" id="creature_behaviour">
@@ -117,11 +138,11 @@
                 </div>
                 <div class="behaviour">
                     <h4>Swim Speed:</h4>
-                    <h5>2 (slow) - 5 (fast)</h5>
+                    <h5>7 (slow) - 15 (fast)</h5>
                 </div>
                 <div class="behaviour">
                     <h4>Aggressive:</h4>
-                    <img src="img/Version_Checkmark_False.png" alt="BT_Negative">
+                    <img src="img/Version_Checkmark_True.png" alt="BT_Positive">
                 </div>
                 <div class="behaviour">
                     <h4>Can enter submarine:</h4>
@@ -144,15 +165,17 @@
         </div>
         <div class="segment_text">
         <p>
-            The Watcher consists of a jet-black main body of immense size that takes the shape of a sphere,
-            and is surrounded by thick armor and protective spikes,
-            giving it great resistance to almost all forms of damage,
-            but this is balanced by its exposed paddles and large,
-            vulnerable eye. Watchers are completely deaf,
-            and rely entirely on their impressive sight to find
-            objects of interest such as submarines or divers.
-            Watchers are solitary and always found alone,
-            and have no special interactions with each other.
+            The Latcher is a large creature which resides in the Abyss.
+            It has several eyes which glow,
+            revealing its position to anyone gazing through windows or a periscope.
+            Its many teeth are used to consume smaller living beings,
+            though it has been observed to feast on corpses lost to the depths.
+            It has four legs which make its signature on the sonar easy to identify.
+            Within the mouth of this creature hides an incredibly long tongue which
+            can extend up to 45 meters. Once the tongue makes contact with a target,
+            the Latcher will only let go if it feels threatened,
+            wishes to attack from a new angle,
+            or has eaten whatever it has caught.
         </p>
         </div>
     </div>
@@ -168,15 +191,14 @@
         </div>
         <div class="segment_text">
             <p>
-                Watchers are passive but inquisitive creatures:
-                despite having no desire to attack the submarine or its crew,
-                Watchers will still approach the ship to gaze at human activities.
-                While the Watcher's passive behavior is a pleasant contrast to the other denizens of Europa,
-                its effect upon the human mind with its deep gaze means you unfortunately have to deal with it in some manner,
-                usually violence.
-
-                The Watcher constantly emits a loud, distorted "static" that is completely alien to all other sources of sound,
-                making it easy to hear if one is outside the submarine.
+                The Latcher will initially use its tongue to attack submarines.
+                If this attack misses, it will retreat and observe the submarine from a safe distance.
+                It will then approach the submarine again and attempt once more to attach its tongue to
+                the submarine. Once the Latcher's tongue has made contact,
+                it will drag the submarine into the depths of the Abyss at rapid speeds.
+                Additionally, it will bring itself closer to the submarine and start biting at the hull,
+                causing hull damage. The Latcher will also ram its body into the submarine on occasion,
+                causing further hull damage.
             </p>
         </div>
     </div>

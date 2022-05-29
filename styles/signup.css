@@ -1,0 +1,106 @@
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    /*background-color: #212A33;*/
+}
+
+/* Modal Content/Box */
+.modal_content {
+
+    /*background-color: #fefefe;*/
+    background-color: #C4C4C4;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    max-width: 30%; /* Could be more or less, depending on screen size */
+    width: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form {
+    display: grid;
+    grid-gap: 12px;
+
+    grid-auto-flow: row;
+
+    color: #212A33;
+    font-family: Barlow, sans-serif;
+    font-weight: normal;
+    font-size: large;
+}
+
+.form_item {
+    padding: 6px 2px 0 2px;
+}
+
+.form_item input {
+    margin-top: 10px;
+    width: 60%;
+    height: 3.5vh;
+}
+
+#signup-modal #form_notify {
+    max-width: 90%;
+    height: 3.5vh;
+    padding: 3px 8px 3px 6px;
+}
+
+#signup-modal #form_notify_label {
+    font-weight: normal;
+    font-size: small;
+}
+
+#signup-modal #form_contribute {
+    width: auto;
+    height: auto;
+}
+
+#signup_button_container {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#signup_submit {
+    font-size: 1.3rem;
+    min-width: 10vh;
+    height: 5vh;
+    color: #FFFFFF;
+    border: none;
+    background-color: #6B8E23;
+    -webkit-border-radius: 22px;
+}
+
+.form_error_message {
+    color: #212A33;
+    /*background-color: red;*/
+    text-decoration: underline;
+    text-decoration-color: #E4572E;
+    padding: 4px;
+    font-size: medium;
+    font-weight: bold;
+}
