@@ -82,10 +82,17 @@ body {
   opacity: 0.8;
 }
 
+.featured_creature_content {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .featured_creatures {
-  margin-left: 10%;
-  margin-right: 16%;
-  margin-bottom: 1em;
+  max-width: 80vw;
+  min-width: 120vh;
+  margin: 0 auto 1em auto;
 
   display: flex;
   flex-flow: column nowrap;

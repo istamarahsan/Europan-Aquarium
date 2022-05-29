@@ -32,13 +32,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .page_title {
-    font-size: 7vh;
+    font-size: 2.7rem;
     font-style: normal;
     font-weight: 700;
 }
 
 .page_subtitle {
-    font-size: 3vh;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
@@ -112,11 +112,14 @@ h1, h2, h3, h4, h5, h6, p {
     flex-flow: row;
     justify-content: flex-start;
     align-items: flex-end;
+    margin-top: 7px;
+    height: 0.5vh;
+    width: 60%;
 }
 
 .infocard_item_header .separator {
-    height: 4px;
-    width: 20%;
+    height: 100%;
+    width: 100%;
 }
 
 #creature_stats .stat_grid {
@@ -180,7 +183,7 @@ h1, h2, h3, h4, h5, h6, p {
     /*margin: 5px;*/
 }
 
-.damage_type_image_container img{
+.damage_type_image_container img {
     height: auto;
     max-width: 100%;
     object-fit: contain;
@@ -235,7 +238,6 @@ h1, h2, h3, h4, h5, h6, p {
     bottom: 0;
     left: 0;
     opacity: 0.2;
-    /*z-index: 0;*/
 }
 
 #creature_description::before {
@@ -257,18 +259,22 @@ h1, h2, h3, h4, h5, h6, p {
 .segment_content {
     position: relative;
 
+    min-width: 70vh;
+    max-width: 70vw;
     padding: 20px;
-    margin-right: 50%;
+    margin-right: auto;
 }
 
 .segment_header {
-    font-size: 1.7rem;
+    /*font-size: 1.7rem;*/
+    font-size: 2.9vh;
     margin-block-end: 0.6em;
 }
 
 .segment_header .separator_holder{
     padding-top: 5px;
-
+    width: 150px;
+    height: 1.5vh;
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
@@ -276,13 +282,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .segment_header .separator{
-    width: 30%;
-    height: 8px;
+    width: 100%;
+    height: 100%;
 }
 
 .segment_text {
-    font-size: 1.3rem;
-    text-align: justify;
+    font-size: 2.1vh;
+    text-align: left;
+    line-height: 1.45em;
 }
 
 
