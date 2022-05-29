@@ -37,7 +37,7 @@ body {
 
 .banner::before {
   content: "";
-  background-image: url("/img/submarine-creature-wallpaper.jpg");
+  background-image: url("bg/submarine-creature-wallpaper.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
